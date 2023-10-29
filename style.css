@@ -1,0 +1,173 @@
+:root{
+    
+/* ## Colors */
+
+/* ### Primary */
+
+--ModerateViolet: hsl(263, 55%, 52%);
+--VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+--VeryDarkBlackishBlue: hsl(219, 29%, 14%);
+--WhiteColor: hsl(0, 0%, 100%);
+
+/* ### Neutral */
+
+--LightGray: hsl(0, 0%, 81%);
+--LightGrayishBlue: hsl(210, 46%, 95%);
+
+--fontFamily: 'Barlow Semi Condensed', sans-serif;
+
+/* Note for text colors:
+
+1. "Verified Graduate" has the same color as the person's name with 50% opacity
+2. Review paragraphs inside the quotations have the same color as well, but are at 70% opacity */
+}
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+}
+body{
+    font-family: var(--fontFamily);
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.testimonials_main{
+    display: grid;
+    grid-template-areas: 
+    'daniel daniel daniel daniel daniel daniel daniel daniel jonathan jonathan kira kira ' 
+    'jeanette jeanette patrick patrick patrick patrick patrick patrick patrick patrick kira kira'
+    ;
+    gap: 20px;
+    padding: 45px;
+    width: 85%;
+    
+}
+
+
+.daniel_card{
+    background: var(--ModerateViolet);
+    border-radius: 10px;
+    padding: 30px;
+    grid-area: daniel;
+    box-shadow: 1px 0px 20px rgba(128, 128, 128, 0.329);
+    position: relative;
+    
+}
+.jonathan_card{
+    background: var(--VeryDarkGrayishBlue);
+    border-radius: 10px;
+    padding: 30px;
+    grid-area: jonathan;
+    box-shadow: 1px 0px 20px rgba(128, 128, 128, 0.329);
+}
+.kira_card{
+    background: var(--WhiteColor);
+    border-radius: 10px;
+    padding: 30px;
+    grid-area: kira;
+    box-shadow: 1px 0px 20px rgba(128, 128, 128, 0.329);
+}
+.jeanette_card{
+    background: var(--WhiteColor);
+    border-radius: 10px;
+    padding: 30px;
+    grid-area: jeanette;
+    box-shadow: 1px 0px 20px rgba(128, 128, 128, 0.329);
+}
+.patrick_card{
+    background: var(--VeryDarkBlackishBlue);
+    border-radius: 10px;
+    padding: 30px;
+    grid-area: patrick;
+    box-shadow: 1px 0px 20px rgba(128, 128, 128, 0.329);
+}
+
+.card_profile{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.card_profile img{
+    border-radius: 50%;
+    width: 40px;
+    
+}
+.card_profile div{
+    padding-left: 20px;
+}
+
+.card_profile div h4{
+    color: var(--WhiteColor);
+}
+.card_profile div p{
+    color: var(--LightGray);
+    font-size: 14px;
+}
+
+.profile_details h4{
+    color: var(--WhiteColor);
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.profile_details p{
+    color: var(--LightGray);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+/* fgf */
+
+.kira_card .card_profile div h4{
+    color: var(--VeryDarkGrayishBlue);
+}
+.kira_card .profile_details h4{
+    color: var(--VeryDarkBlackishBlue);
+}
+.jeanette_card .card_profile div h4{
+    color: var(--VeryDarkGrayishBlue);
+}
+.jeanette_card .profile_details h4{
+    color: var(--VeryDarkBlackishBlue);
+}
+
+.Img{
+    position: absolute;
+    right: 85px;
+    top: 0;
+    
+}
+
+
+
+@media only screen and (max-width:768px) {
+    .testimonials_main{
+        display: inline-block;
+        padding: 15px;
+        gap: 10px;
+        width: 100%;
+    }
+    .daniel_card{
+        margin-bottom: 20px;
+    }
+    .patrick_card{
+        margin-bottom: 20px;
+    }
+    .jeanette_card{
+        margin-bottom: 20px;
+    }
+    .jonathan_card{
+        margin-bottom: 20px;
+    }
+    .kira_card{
+        margin-bottom: 20px;
+    }
+}
